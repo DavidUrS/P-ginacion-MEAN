@@ -1,0 +1,63 @@
+  <header class="container-fuild">
+    <h1>Escoje el tipo de maquinaria</h1>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"
+        *ngFor="let cate of category | paginate: { itemsPerPage: 6, currentPage: p }">
+          <div class="p-2">
+              <div class="card text-center">
+                  <div class="card-title">
+                    <p class="card-title">{{cate.category}}</p>
+                  </div>
+                  <div class="card-body">
+                    <a routerLink="/categoriess">
+                      <img src="{{cate.cover}}" alt="" class="card-img-top w-100 h-75">
+                    </a>
+                  </div>
+                    <a type="button" (click)="findOne(cate.category,cate.cover)"
+                    class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      Descripción
+                </a>
+                  <div class="card-footer">
+                    <strong>Precio:</strong>
+                    ${{cate.price}}
+                    <a href="http://"><img src="../../../assets/cart-of-ecommerce.png"></a>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">{{categ}}</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <img class="img-fluid" src="{{url}}" alt="">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos qui quam, earum consequuntur recusandae sed accusamus dolore inventore maxime delectus in nesciunt officia eaque quae? Amet accusamus tempora velit iure?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Final del modal -->
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div id="foot" class="row">
+      <pagination-controls style="margin: 0 auto;"  (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+
+
+
+

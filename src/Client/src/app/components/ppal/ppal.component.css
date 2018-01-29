@@ -1,0 +1,15 @@
+#izquierda{
+}
+
+.btn{
+  background: white;
+  color:black;
+  border-radius: 0px;
+}
+
+#derecha{
+  min-height:100vh;
+  background-image: url('../../../assets/fondo3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

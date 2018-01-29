@@ -1,0 +1,23 @@
+.card-footer{
+  justify-content:space-between;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+}
+#foot{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+#btn_des{
+  border-radius: 0px;
+}
+header{
+  
+}
